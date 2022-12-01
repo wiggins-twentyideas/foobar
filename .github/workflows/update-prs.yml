@@ -1,0 +1,17 @@
+name: Update PRs
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        
+      - name: Merge upstream branch into PRs
+        uses: wiggins-twentyideas/pr-updater-action@1bad92d
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
