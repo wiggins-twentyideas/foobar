@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
         
       - name: Merge upstream branch into PRs
-        uses: wiggins-twentyideas/pr-updater-action@4fca5082a748c6a0d87f2920228c81c69c2445b6
+        uses: wiggins-twentyideas/pr-updater-action@7b3f59e6a5d6e997b26d2d951a57c89b062e8ccd
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           exclude_drafts: "true"
